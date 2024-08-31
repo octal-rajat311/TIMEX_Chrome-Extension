@@ -1,0 +1,106 @@
+.clockdiva
+{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+
+}
+/* body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: rgb(22, 122, 168);
+} */
+.clock
+{
+    width: 350px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff url(clock.png);
+    background-size: cover;
+    border-radius: 50%;
+    border: 20px solid #fff;
+    box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.1),0 20px 20px rgba(0, 0, 0, .2),0 0 0 4px rgba(255, 255, 255, 1);
+
+}
+.clock::before
+{
+    content: '';
+    position: absolute;
+    width: 15px;
+    background-color: #848484;
+    border: 2px solid #fff;
+    z-index: 100000;
+    border-radius: 50%;
+
+}
+.analoghour,.analogmin,.analogsec
+{
+    position: absolute;
+}
+.analoghour,.ahr 
+{
+    width: 160px;
+    height: 160px;
+}
+.analogmin,.amn
+{
+    width: 190px;
+    height: 190px;
+}
+.analogsec,.asc
+{
+    width: 230px;
+    height: 230px;
+}
+.ahr,.amn,.asc
+{
+display: flex;
+justify-content:center;
+position:absolute;
+border-radius: 50%;
+}
+.ahr::before
+{
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 80px;
+    background-color: #848484;
+    z-index: 10;
+    border-radius: 6px 6px 0 0;
+}
+.amn::before
+{
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 90px;
+    background-color: #848484;
+    z-index: 11;
+    border-radius: 6px 6px 0 0;
+}
+.amn::before
+{
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 90px;
+    background-color: #d6d6d6;
+    z-index: 11;
+    border-radius: 6px 6px 0 0;
+}
+.asc::before
+{
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 150px;
+    background-color: #ff6767;
+    z-index: 12;
+    border-radius: 6px 6px 0 0;
+}

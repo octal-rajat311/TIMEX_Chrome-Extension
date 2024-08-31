@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background: #03dfff;
+    background: linear-gradient(139deg, #03ddffcb 0%, #1f0074b6 90%);
+}
+
+.container {
+    position: relative;
+    max-width: 1000px; /* Increased width */
+    padding: 20px;
+    margin: 50px auto;
+    background: #fff; /* Added background for contrast */
+    border-radius: 10px; /* Rounded corners for modern look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+.addTask {
+    width: 100%;
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    border-bottom: 2px solid #eee; /* Modern border */
+    margin-bottom: 20px;
+}
+
+.addTask > input[type="text"] {
+    flex: 1; /* Flex grow to take available space */
+    color: #333;
+    border: none;
+    border-radius: 5px; /* Rounded corners */
+    background: #f4f4f4; /* Light background for input */
+    padding: 10px;
+    font-size: 18px;
+    outline: none;
+}
+
+.addTask button {
+    margin-left: 10px;
+    background: #007BFF; /* Modern button color */
+    color: #fff;
+    font-size: 18px;
+    text-transform: uppercase;
+    padding: 10px;
+    border: none;
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.addTask button:hover {
+    background: #0056b3; /* Darker shade on hover */
+}
+
+.notCompleted, .Completed {
+    margin: 5px 0;
+    padding: 20px;
+}
+
+h3 {
+    font-size: 24px; /* Slightly smaller for modern look */
+    text-transform: uppercase;
+    text-align: center;
+    color: #007BFF; /* Modern header color */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+ol {
+    list-style: none;
+    counter-reset: my-counter;
+}
+
+ol li {
+    width: 100%;
+    padding: 10px; /* Increased padding for better readability */
+    margin: 5px 0;
+    background: #f80a0abb;
+    color: white;
+    font-size: 18px; /* Adjusted for better fit */
+    counter-increment: my-counter;
+    border-radius: 5px; /* Rounded corners */
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Align buttons to right */
+}
+
+ol.Completed li {
+    background: #3ddb52;
+    color: black;
+}
+
+ol li::before {
+    content: counter(my-counter);
+    background: #231381;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    display: inline-block;
+    line-height: 2rem;
+    text-align: center;
+    color: #fff;
+    margin-right: 0.5rem;
+}
+
+li button {
+    padding: 5px;
+    font-size: 24px; /* Adjusted for better fit */
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+li button:hover {
+    color: #007BFF; /* Button color on hover */
+}
